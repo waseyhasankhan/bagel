@@ -1,0 +1,23 @@
+$colorz: (
+  primary: #1976d2,
+  secondary: #424242,
+  white: #ffffff,
+  accent: #82b1ff,
+  error: #ff5252,
+  info: #2196f3,
+  success: #4caf50,
+  warning: #ffc107,
+);
+
+// @mixin infobox_mixin(
+//   $border-radius,
+//   $border-color,
+//   $padding,
+//   $margin-bottom,
+//   $color
+// ) {
+//   border: $border-radius solid $border-color;
+//   padding: $padding;
+//   margin-bottom: $margin-bottom;
+//   color: $color;
+// }

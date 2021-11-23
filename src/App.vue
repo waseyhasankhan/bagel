@@ -1,32 +1,53 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app id="app">
+    <navigation />
+    <!-- <v-content> -->
+    <!-- </v-content> -->
+    <v-main>
+      <!-- <v-container class="fill-height" fluid> -->
+      <router-view></router-view>
+      <!-- If using vue-router -->
+      <!-- </v-container> -->
+      <!--  -->
+    </v-main>
+    <!-- <v-footer app>
+      &copy; by WHK
+      
+    </v-footer> -->
+  </v-app>
 </template>
 
+<script>
+import Navigation from "./components/Navigation.vue";
+export default {
+  components: { Navigation },
+
+  name: "App",
+  props: {
+    source: String,
+  },
+};
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+main {
+  background-image: url("../src/assets/bagel-hero.jpg");
+  background-size: cover;
 }
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.col h1 {
+  border: 5px solid #fff;
+  padding: 10px;
+  margin-bottom: 5px;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 16px;
+  text-align: center;
+}
+.col:last-child h1 {
+  text-align: center;
+}
+#info {
+  background-color: #fff;
 }
 </style>
